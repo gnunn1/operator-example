@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: api-designer
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: api-designer
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: manifests
+    repoURL: https://github.com/gnunn1/operator-example
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
