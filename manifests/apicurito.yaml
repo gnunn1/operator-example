@@ -1,0 +1,9 @@
+apiVersion: apicur.io/v1
+kind: Apicurito
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-wave: "1"
+  name: apicurito-service
+spec:
+  size: 3
