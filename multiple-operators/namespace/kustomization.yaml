@@ -1,0 +1,5 @@
+namespace: integration
+
+resources:
+- namespace.yaml
+- operatorgroup.yaml

@@ -1,0 +1,5 @@
+namespace: integration
+
+resources:
+- subscription.yaml
+- apicurito.yaml

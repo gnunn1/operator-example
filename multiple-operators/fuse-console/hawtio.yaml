@@ -1,0 +1,24 @@
+apiVersion: hawt.io/v1alpha1
+kind: Hawtio
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-wave: "1"
+  name: fuse-console
+spec:
+  auth:
+    clientCertCheckSchedule: '* */12 * * *'
+    clientCertExpirationPeriod: 24
+  replicas: 1
+  resources:
+    limits:
+      cpu: "1"
+      memory: 512Mi
+    requests:
+      cpu: 200m
+      memory: 32Mi
+  route:
+    caCert:
+      key: ""
+  type: Namespace
+  version: "1.12"
