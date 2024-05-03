@@ -7,9 +7,9 @@ spec:
   destination:
     namespace: api-designer
     server: https://kubernetes.default.svc
-  project: default
+  project: demo
   source:
-    path: 1-automatic-approval
+    path: 1-automatic-approval/manifests
     repoURL: https://github.com/gnunn1/operator-example
     targetRevision: HEAD
   syncPolicy:
