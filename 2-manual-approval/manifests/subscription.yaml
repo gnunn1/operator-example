@@ -4,7 +4,7 @@ metadata:
   name: fuse-apicurito
 spec:
   channel: fuse-apicurito-7.12.x
-  installPlanApproval: Automatic
+  installPlanApproval: Manual
   name: fuse-apicurito
   source: redhat-operators
   sourceNamespace: openshift-marketplace
