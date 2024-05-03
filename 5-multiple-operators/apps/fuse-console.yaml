@@ -13,7 +13,7 @@ spec:
     server: https://kubernetes.default.svc
   project: demo
   source:
-    path: multiple-operators/fuse-console
+    path: 5-multiple-operators/fuse-console
     repoURL: https://github.com/gnunn1/operator-example
     targetRevision: HEAD
   syncPolicy:
