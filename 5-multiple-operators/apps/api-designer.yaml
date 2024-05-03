@@ -5,6 +5,8 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
   name: api-designer
   namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: integration
