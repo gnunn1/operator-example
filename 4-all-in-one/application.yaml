@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: demo
   source:
-    path: all-in-one/manifests
+    path: 4-all-in-one/manifests
     repoURL: https://github.com/gnunn1/operator-example
     targetRevision: HEAD
   syncPolicy:
