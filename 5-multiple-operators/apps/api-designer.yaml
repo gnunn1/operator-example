@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: integration
     server: https://kubernetes.default.svc
-  project: default
+  project: demo
   source:
     path: multiple-operators/api-designer
     repoURL: https://github.com/gnunn1/operator-example

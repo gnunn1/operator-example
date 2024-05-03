@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: openshift-gitops
     server: https://kubernetes.default.svc
-  project: default
+  project: demo
   source:
     path: 3-app-of-app/apps
     repoURL: https://github.com/gnunn1/operator-example

@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: integration
     server: https://kubernetes.default.svc
-  project: default
+  project: demo
   source:
     path: multiple-operators/fuse-console
     repoURL: https://github.com/gnunn1/operator-example

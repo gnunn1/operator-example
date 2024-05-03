@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: api-designer
     server: https://kubernetes.default.svc
-  project: default
+  project: demo
   source:
     path: all-in-one/manifests
     repoURL: https://github.com/gnunn1/operator-example
