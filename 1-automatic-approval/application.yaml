@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-app
+  name: api-designer
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: openshift-gitops
+    namespace: api-designer
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: app-of-app/apps
+    path: 1-automatic-approval
     repoURL: https://github.com/gnunn1/operator-example
     targetRevision: HEAD
   syncPolicy:

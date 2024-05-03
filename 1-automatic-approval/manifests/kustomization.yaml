@@ -1,0 +1,7 @@
+namespace: api-designer
+
+resources:
+- namespace.yaml
+- operatorgroup.yaml
+- subscription.yaml
+- apicurito.yaml

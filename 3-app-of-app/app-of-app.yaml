@@ -1,17 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "0"
-  name: operator
+  name: app-of-app
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: api-designer
+    namespace: openshift-gitops
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: app-of-app/operator
+    path: 3-app-of-app/apps
     repoURL: https://github.com/gnunn1/operator-example
     targetRevision: HEAD
   syncPolicy:
