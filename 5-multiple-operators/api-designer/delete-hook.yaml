@@ -20,7 +20,7 @@ spec:
           - |
             oc delete csv -l ${CSV_SELECTOR}
 
-            sleep 120
+            sleep 30
           name: delete-csv
       dnsPolicy: ClusterFirst
       restartPolicy: Never
