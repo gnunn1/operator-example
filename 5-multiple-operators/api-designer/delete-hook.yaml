@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: delete-csv-hook
+  namespace: integration
+  annotations:
+    argocd.argoproj.io/hook: Delete
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+spec:
+  template:
+    spec:
+      containers:
+        - image: quay.io/gnunn/tools:4.10-1
+          env:
+          - name: CSV_SELECTOR
+            value: operators.coreos.com/fuse-apicurito.integration
+          command:
+          - /bin/bash
+          - -c
+          - |
+            oc delete -l ${CSV_SELECTOR}
+          name: delete-csv
+      dnsPolicy: ClusterFirst
+      restartPolicy: Never
+      terminationGracePeriodSeconds: 30
+      serviceAccount: delete-csv-hook
+      serviceAccountName: delete-csv-hook
