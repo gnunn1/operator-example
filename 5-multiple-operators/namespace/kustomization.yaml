@@ -3,3 +3,4 @@ namespace: integration
 resources:
 - namespace.yaml
 - operatorgroup.yaml
+- delete-hook-rbac.yaml
