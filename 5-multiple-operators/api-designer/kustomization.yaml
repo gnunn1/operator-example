@@ -2,5 +2,6 @@ namespace: integration
 
 resources:
 - delete-hook-rbac.yaml
+- delete-hook.yaml
 - subscription.yaml
 - apicurito.yaml
