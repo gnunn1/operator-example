@@ -9,13 +9,13 @@ metadata:
   name: delete-csv-hook
 rules:
   - apiGroups:
-      - "operators.coreos.com"
+    - operators.coreos.com
     resources:
-      - clusterserviceversion
+    - clusterserviceversions
     verbs:
-      - delete
-      - get
-      - list
+    - delete
+    - get
+    - list
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
