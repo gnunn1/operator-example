@@ -19,6 +19,8 @@ spec:
           - -c
           - |
             oc delete -l ${CSV_SELECTOR}
+
+            sleep 120
           name: delete-csv
       dnsPolicy: ClusterFirst
       restartPolicy: Never
